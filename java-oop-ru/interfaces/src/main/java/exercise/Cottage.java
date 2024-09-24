@@ -18,11 +18,11 @@ public class Cottage implements Home {
     public int compareTo(Home another) {
         if (area == another.getArea()) {
             return 0;
-        }
-        else if (area > another.getArea()) {
+        } else if (area > another.getArea()) {
             return 1;
+        } else {
+            return -1;
         }
-        else return -1;
     }
 
     @Override
