@@ -1,6 +1,8 @@
 package exercise;
 
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class App {
     public static List<String> buildApartmentsList(List<Home> homes, int n) {
