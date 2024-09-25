@@ -2,23 +2,18 @@ package exercise;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.stream.Collectors;
+
 
 public class App {
     public static List<String> buildApartmentsList(List<Home> homes, int n) {
-        List<String> homesList = new ArrayList<>();
 
-        // Сортируем список объектов по площади по возрастанию
-        Collections.sort(homes);
-
-        // Берем первые n элементов
-        List<Home> firstHomes = homes.subList(0, Math.min(n, homes.size()));
-
-        // Создаем список строковых представлений объектов
-        for (Home home : firstHomes) {
-            homesList.add(home.toString());
-        }
-
-        return homesList;
+        return homes.stream()
+                .sorted((h1, h2) -> Double.compare(h1.getArea(), h2.getArea()))
+                .limit(n)
+                .map(Home::toString)
+                .collect(Collectors.toList());
     }
 }
+
+
