@@ -1,7 +1,7 @@
 package exercise;
 
 public class Cottage implements Home {
-    private double area; //oбщая площадь коттеджа
+    private double area; //общая площадь коттеджа
     private int floorCount; //количество этажей
 
     public Cottage(double area, int floorCount) {
