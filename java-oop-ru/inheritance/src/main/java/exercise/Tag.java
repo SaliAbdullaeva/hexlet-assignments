@@ -24,6 +24,6 @@ public class Tag {
     }
 
     public String toString() {
-        return "<" + getTagName() + attributesOneLine() + ">"; //<img class="v-10" id="wop">
+        return "<" + getTagName() + " " + attributesOneLine() + ">"; //<img class="v-10" id="wop">
     }
 }
