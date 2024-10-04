@@ -18,7 +18,7 @@ public class PairedTag extends Tag {
     public String childrenTagsOneLine() {
         return childrenTags.stream() //возвращаем набор записей (пар ключ-значение) из карты
                 .map(object -> object.toString())
-                .collect(Collectors.joining(" "));
+                .collect(Collectors.joining(""));
     }
 
     @Override
