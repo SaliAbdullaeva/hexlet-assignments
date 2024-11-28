@@ -15,7 +15,7 @@ public class Circle {
         if (radius < 0) {
             throw new NegativeRadiusException("Радиус не может быть отрицательным");
         }
-        return Math.PI * radius * radius; // or Math.PI * Math.pow(radius, 2)
+        return Math.PI * radius * radius; // или Math.PI * Math.pow(radius, 2)
     }
 
     public int getRadius() {
