@@ -14,8 +14,8 @@ public class Application {
     }
 
     @GetMapping("/about")
-    String home() {
-        return "Hello World!";
+    String about() {
+        return "Hello Motherfuckers!";
     }
 }
 // END
