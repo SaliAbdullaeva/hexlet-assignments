@@ -30,10 +30,14 @@ public final class App {
 
         // BEGIN
         app.after(ctx -> {
-            // Получаем тело ответа
-            String responseBody = ctx.body();
+            String responseBody = ctx.result(); // Получаем тело ответа
+            if (responseBody == null) {
+                responseBody = "";
+            }
+
             // Вычисляем SHA-256 хеш
             String digest = DigestUtils.sha256Hex(responseBody);
+
             // Добавляем заголовок X-Response-Digest
             ctx.header("X-Response-Digest", digest);
         });
