@@ -4,6 +4,5 @@ package exercise.daytime;
 // Реализация методов представлена в классах Morning, Day, Evening, Night,
 // которые реализуют этот интерфейс
 public interface Daytime {
-
     String getName();
 }

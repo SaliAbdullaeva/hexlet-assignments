@@ -10,6 +10,8 @@ import exercise.daytime.Day;
 import exercise.daytime.Night;
 
 // BEGIN
+
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.context.annotation.RequestScope;
 // END
 
